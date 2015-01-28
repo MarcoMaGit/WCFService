@@ -1,0 +1,5 @@
+D:\Azure\IoT\DemoProject\RestService_POST\RestService\RestService\bin\RestService.dll.config
+D:\Azure\IoT\DemoProject\RestService_POST\RestService\RestService\bin\RestService.dll
+D:\Azure\IoT\DemoProject\RestService_POST\RestService\RestService\bin\RestService.pdb
+D:\Azure\IoT\DemoProject\RestService_POST\RestService\RestService\obj\Debug\RestService.dll
+D:\Azure\IoT\DemoProject\RestService_POST\RestService\RestService\obj\Debug\RestService.pdb
