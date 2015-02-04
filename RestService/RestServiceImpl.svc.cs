@@ -1,7 +1,12 @@
 ﻿namespace RestService
 {
+    using System;
+    using System.ComponentModel.Design;
     using System.IO;
     using System.ServiceModel.Web;
+    using System.Web;
+    using System.Xml;
+    using System.Xml.Linq;
 
     public class RestServiceImpl : IRestServiceImpl
     {
@@ -35,7 +40,9 @@
         public Stream StoreSensorData(Stream request)
         {
             var reader = new StreamReader(request);
-            string text = "Sensor Data Stored: " + reader.ReadToEnd();
+            string data = reader.ReadToEnd();
+            string text = "Sensor Data Stored: " + data;
+            SaveDataToXMLFile(data);
             var encoding = new System.Text.ASCIIEncoding();
             var ms = new MemoryStream(encoding.GetBytes(text));
             if (WebOperationContext.Current != null)
@@ -43,6 +50,30 @@
                 WebOperationContext.Current.OutgoingResponse.ContentType = "text/html";
             }
             return ms;
+        }
+
+        private void SaveDataToXMLFile(string value)
+        {
+            try
+            {
+                string path = AppDomain.CurrentDomain.BaseDirectory + @"\SensorData.xml";
+                XDocument doc = XDocument.Load(path);
+                XElement ele = new XElement("SensorData", value);
+                ele.SetAttributeValue("TimeStamp",DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"));
+                doc.Root.Add(ele);
+                doc.Save(path);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        
+        public XmlElement GetSensorData()
+        {
+            var doc = new XmlDocument();
+            doc.Load(AppDomain.CurrentDomain.BaseDirectory + @"\SensorData.xml");
+            return doc.DocumentElement;
         }
 
         #endregion      

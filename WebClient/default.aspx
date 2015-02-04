@@ -48,7 +48,7 @@
             </tr>
             <tr>
                 <td valign="top">
-                    <asp:Button ID="btnClick2" runat="server" onclick="Button2_Click" 
+                    <asp:Button ID="btnInsertSensorData" runat="server" onclick="BtnInsertSensorDataClick" 
                         Text="InvokeService2" />
                 </td>
                 <td>
@@ -62,7 +62,31 @@
                 <td valign="top">
                     &nbsp;</td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" Height="134px" TextMode="MultiLine" 
+                    <asp:TextBox ID="txtInsertSensorData" runat="server" Height="134px" TextMode="MultiLine" 
+                        Width="773px"></asp:TextBox>
+                </td>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <asp:Button ID="btnShowSensorData" runat="server" onclick="BtnShowSensorDataClick" 
+                        Text="ShowSensorData" />
+                </td>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    &nbsp;</td>
+                <td>
+                    <asp:TextBox ID="SensorDataList" runat="server" Height="134px" TextMode="MultiLine" 
                         Width="773px"></asp:TextBox>
                 </td>
                 <td>

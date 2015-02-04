@@ -4,6 +4,7 @@ using System.ServiceModel.Web;
 namespace RestService
 {
     using System.IO;
+    using System.Xml;
 
     [ServiceContract]
     public interface IRestServiceImpl
@@ -26,5 +27,9 @@ namespace RestService
         [OperationContract]
         [WebInvoke(UriTemplate = "storesensordata")]
         Stream StoreSensorData(Stream request);
+
+        [OperationContract]
+        [WebInvoke(Method = "GET", UriTemplate = "getsensordata")]
+        XmlElement GetSensorData();
     }
 }

@@ -4,3 +4,10 @@ D:\Azure\IoT\DemoProject\RestService_POST\RestService\RestService\bin\RestServic
 D:\Azure\IoT\DemoProject\RestService_POST\RestService\RestService\obj\Release\RestService.dll
 D:\Azure\IoT\DemoProject\RestService_POST\RestService\RestService\obj\Release\RestService.pdb
 D:\Azure\IoT\DemoProject\RestService_POST\RestService\RestService\obj\Release\RestService.csprojResolveAssemblyReference.cache
+C:\Users\YMa\Documents\GitHub\WCFService\RestService\bin\RestService.dll.config
+C:\Users\YMa\Documents\GitHub\WCFService\RestService\bin\RestService.dll
+C:\Users\YMa\Documents\GitHub\WCFService\RestService\bin\RestService.pdb
+C:\Users\YMa\Documents\GitHub\WCFService\RestService\obj\Release\RestService.csprojResolveAssemblyReference.cache
+C:\Users\YMa\Documents\GitHub\WCFService\RestService\obj\Release\RestService.dll
+C:\Users\YMa\Documents\GitHub\WCFService\RestService\obj\Release\RestService.pdb
+C:\Users\YMa\Documents\GitHub\WCFService\RestService\bin\SensorData.xml
