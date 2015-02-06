@@ -5,6 +5,9 @@ using System.Web.UI;
 
 namespace WebClient
 {
+    using System.Xml;
+    using System.Xml.Linq;
+
     public partial class _default : Page
     {
         // private string wcfUrl = @"http://localhost:35798/SensorDataServiceImpl.svc/";
@@ -61,11 +64,17 @@ namespace WebClient
 
                 if (responseStream != null)
                 {
-                    var streamReader = new StreamReader(responseStream);
+                    //var streamReader = new StreamReader(responseStream);
+                    XElement xElement = XElement.Load(responseStream);
 
-                    this.SensorDataList.Text = streamReader.ReadToEnd();
+                    this.SensorDataList.Text = "";
+                    foreach (XElement sensorData in xElement.Elements())
+                    {
+                        this.SensorDataList.Text += "TimeStamp :" + sensorData.Attribute("TimeStamp").Value + " "
+                                                    + sensorData.Value + "\n";
+                    }
                 }
             }
-        }        
+        }
     }
 }
