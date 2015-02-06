@@ -42,7 +42,8 @@
             var reader = new StreamReader(request);
             string data = reader.ReadToEnd();
             string text = "Sensor Data Stored: " + data;
-            SaveDataToXMLFile(data);
+            SensorDataRepositoryFactory.Instance.InsertSensorData(data);
+            // SaveDataToXMLFile(data);
             var encoding = new System.Text.ASCIIEncoding();
             var ms = new MemoryStream(encoding.GetBytes(text));
             if (WebOperationContext.Current != null)
@@ -69,11 +70,12 @@
             }
         }
         
-        public XmlElement GetSensorData()
+        public XElement GetSensorData()
         {
-            var doc = new XmlDocument();
-            doc.Load(AppDomain.CurrentDomain.BaseDirectory + @"\SensorData.xml");
-            return doc.DocumentElement;
+            return SensorDataRepositoryFactory.Instance.GetSensorData();
+            // var doc = new XmlDocument();
+            // doc.Load(AppDomain.CurrentDomain.BaseDirectory + @"\SensorData.xml");
+            // return doc.DocumentElement;
         }
 
         #endregion      

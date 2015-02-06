@@ -10,8 +10,8 @@ namespace WebClient
 
     public partial class _default : Page
     {
-        private string wcfUrl = @"http://localhost:35798/RestServiceImpl.svc/";
-        // private string wcfUrl = @"http://marcoweb.chinacloudsites.cn/RestServiceImpl.svc/";
+        // private string wcfUrl = @"http://localhost:35798/RestServiceImpl.svc/";
+        private string wcfUrl = @"http://marcoweb.chinacloudsites.cn/RestServiceImpl.svc/";
 
         protected void Page_Load(object sender, EventArgs e)
         {

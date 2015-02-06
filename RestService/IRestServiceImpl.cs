@@ -5,6 +5,7 @@ namespace RestService
 {
     using System.IO;
     using System.Xml;
+    using System.Xml.Linq;
 
     [ServiceContract]
     public interface IRestServiceImpl
@@ -30,6 +31,6 @@ namespace RestService
 
         [OperationContract]
         [WebInvoke(Method = "GET", UriTemplate = "getsensordata")]
-        XmlElement GetSensorData();
+        XElement GetSensorData();
     }
 }

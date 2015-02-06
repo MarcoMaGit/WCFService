@@ -83,6 +83,7 @@
     <Compile Include="RestServiceImpl.svc.cs">
       <DependentUpon>RestServiceImpl.svc</DependentUpon>
     </Compile>
+    <Compile Include="SensorDataRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
