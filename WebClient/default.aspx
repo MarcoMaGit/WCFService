@@ -22,37 +22,12 @@
     
         <table class="style1">
             <tr>
-                <td>
-                    <asp:Button ID="btnClick" runat="server" onclick="Button1_Click" 
-                        Text="InvokeService" />
-                </td>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-                <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
                 <td valign="top">
-                    Response:
-                </td>
-                <td>
-                    <asp:TextBox ID="TextBox1" runat="server" Height="134px" TextMode="MultiLine" 
-                        Width="773px"></asp:TextBox>
-                </td>
-                <td>
                     &nbsp;</td>
                 <td>
-                    &nbsp;</td>
-            </tr>
-            <tr>
-                <td valign="top">
                     <asp:Button ID="btnInsertSensorData" runat="server" onclick="BtnInsertSensorDataClick" 
-                        Text="InvokeService2" />
+                        Text="Insert Sensor Data" />
                 </td>
-                <td>
-                    &nbsp;</td>
                 <td>
                     &nbsp;</td>
                 <td>
@@ -72,11 +47,11 @@
             </tr>
             <tr>
                 <td valign="top">
-                    <asp:Button ID="btnShowSensorData" runat="server" onclick="BtnShowSensorDataClick" 
-                        Text="ShowSensorData" />
-                </td>
-                <td>
                     &nbsp;</td>
+                <td>
+                    <asp:Button ID="btnShowSensorData" runat="server" onclick="BtnShowSensorDataClick" 
+                        Text="Show Sensor Data" />
+                </td>
                 <td>
                     &nbsp;</td>
                 <td>

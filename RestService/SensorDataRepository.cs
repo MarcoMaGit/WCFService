@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace RestService
+namespace SensorDataService
 {
     using System.Xml.Linq;
 
@@ -19,21 +16,13 @@ namespace RestService
 
         public void InsertSensorData(string parameterValue)
         {
-            try
+            var parameter = new XElement("SensorData") { Value = parameterValue };
+            parameter.SetAttributeValue("TimeStamp", DateTime.Now.ToUniversalTime());
+            var root = this.sensorDatas.Root;
+            if (root != null)
             {
-                XElement parameter = new XElement("SensorData") { Value = parameterValue };
-                parameter.SetAttributeValue("TimeStamp", DateTime.Now.ToUniversalTime());
-                var root = this.sensorDatas.Root;
-                if (root != null)
-                {
-                    root.Add(parameter);
-                }
+                root.Add(parameter);
             }
-            catch (Exception ex)
-            {                
-                throw ex;
-            }
-
         }
 
         public XElement GetSensorData()
@@ -45,25 +34,6 @@ namespace RestService
             }
 
             return null;
-        }
-    }
-
-    public static class SensorDataRepositoryFactory
-    {
-
-        /// <summary>
-        /// This is a thread-safe, lazy singleton.  See http://www.yoda.arachsys.com/csharp/singleton.html
-        /// for more details about its implementation.
-        /// </summary>
-
-        public static SensorDataRepository Instance
-        {
-            get { return Nested.SensorDataRepository; }
-        }
-
-        private class Nested
-        {
-            internal static readonly SensorDataRepository SensorDataRepository = new SensorDataRepository();
         }
     }
 }
