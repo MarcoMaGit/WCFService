@@ -25,6 +25,7 @@
                 <td valign="top">
                     &nbsp;</td>
                 <td>
+                    <asp:TextBox ID="SensorValue" runat="server" Width="59px">0</asp:TextBox>
                     <asp:Button ID="btnInsertSensorData" runat="server" onclick="BtnInsertSensorDataClick" 
                         Text="Insert Sensor Data" />
                 </td>

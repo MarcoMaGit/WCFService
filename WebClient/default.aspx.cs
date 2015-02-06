@@ -25,7 +25,7 @@ namespace WebClient
                 {
                     webRequest.Method = "POST";
                     webRequest.ContentType = "application/x-www-form-urlencoded";
-                    string str = "Temperature: 20";
+                    string str = "Temperature: " + SensorValue.Text;
                     webRequest.ContentLength = str.Length;
                     var sw = new StreamWriter(webRequest.GetRequestStream());
                     sw.Write(str);
