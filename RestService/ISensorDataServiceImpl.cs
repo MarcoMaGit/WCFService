@@ -9,7 +9,7 @@ namespace SensorDataService
     public interface ISensorDataServiceImpl
     {
         [OperationContract]
-        [WebInvoke(UriTemplate = "storesensordata")]
+        [WebInvoke(Method = "POST", UriTemplate = "storesensordata")]
         Stream StoreSensorData(Stream request);
 
         [OperationContract]

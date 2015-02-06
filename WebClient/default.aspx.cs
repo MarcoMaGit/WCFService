@@ -12,6 +12,7 @@ namespace WebClient
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            ServicePointManager.Expect100Continue = false;
         }
 
         protected void BtnInsertSensorDataClick(object sender, EventArgs e)

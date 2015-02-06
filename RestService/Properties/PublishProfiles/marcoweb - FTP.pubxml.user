@@ -7,5 +7,6 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAZYYZLQfwQEyz/Efy5Uk0egAAAAACAAAAAAADZgAAwAAAABAAAABQtdrTrOu3bcu5OEGImzOjAAAAAASAAACgAAAAEAAAAO8xjNhwZOKQktI6ceFKm3mAAAAAtztWcv2g3NNqyC9n2D1MFJioKEjzSUULqT09Penm1EaFGSJgp+foeu90OBx2Bo5e+JZ6EVQUufaTV3WsqjNi5p3XVJjycn2izwaklUnG578go6VmGwB3vRoL20lCK/DQFz6ApJdNgNbet4t0z8NN+RstQfHyWCuLtx2YVeee5lsUAAAAZoCY6thTDCZ6L2xOyqCggxW53tI=</EncryptedPassword>
+    <_PublishTargetUrl>ftp://cnws-prod-sha-001.ftp.chinacloudsites.chinacloudapi.cn/site/wwwroot</_PublishTargetUrl>
   </PropertyGroup>
 </Project>
